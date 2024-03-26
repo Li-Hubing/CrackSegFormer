@@ -9,7 +9,7 @@ The functions implemented in this repository include evaluation of the model, tr
 python tools/model_evaluation.py
 ```
 
-**2. Model Training:** The "train.py" script in the "tools" directory is utilzed for training crack detection models. 
+**2. Model Training:** Pixel-level crack detection models can be trained with: 
 
 ```
 python tools/train.py
