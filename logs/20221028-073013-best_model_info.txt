@@ -1,0 +1,10 @@
+[epoch: 187]
+train_loss: 0.3324
+lr: 0.00000524
+dice coefficient: 0.503
+accuracy: 98.9
+precision: ['99.5', '70.1']
+recall: ['99.4', '75.0']
+F1-score: ['99.4', '72.5']
+IoU: ['98.9', '56.8']
+mean IoU: 77.8
