@@ -1,6 +1,7 @@
 # Crack segmentation based on deep learning
 
-This repository is produced to share material relevant to the Journal paper **"Automatic crack detection on concrete and asphalt surfaces using semantic segmentation network with hierarchical Transformer"** published in **Engineering structures**.  
+This repository is produced to share material relevant to the Journal paper [Automatic crack detection on concrete and asphalt surfaces using semantic segmentation network with hierarchical Transformer](https://www.sciencedirect.com/science/article/pii/S0141029624004656)
+ published in **Engineering structures**.  
 
 The functions implemented in this repository include evaluation of the model, training of pixel-level crack detection models, visualization of model predictions, and assessment of various metrics for detection results.   
 
