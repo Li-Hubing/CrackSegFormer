@@ -29,7 +29,7 @@ The training outcomes, including trained weights, training process, and achieved
 **3. Model Prediction:** Visualizing crack detection results with a trained model can be accomplished by executing:
 
 ```
-python tools/predict.py
+python tools/batch_predict.py
 ```
 
 ![image](https://github.com/Li-Hubing/CrackSegFormer/assets/103866679/73ee0a88-04c7-495d-b4e4-0b50e0336d64)
