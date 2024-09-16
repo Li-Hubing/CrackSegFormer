@@ -19,11 +19,6 @@ from models.deeplab_v3.deeplabv3 import deeplabv3_mobilenetv3_large
 from models.segformer.segformer import SegFormer
 
 
-def time_synchronized():
-    torch.cuda.synchronize() if torch.cuda.is_available() else None
-    return time.time()
-
-
 num_classes = 2
 input = torch.randn(1, 3, 512, 512)
 
@@ -57,22 +52,17 @@ for i in range(14):
     model.eval()  # 关掉dropout方法
     total_time = 0.
     Latency = 0.
+    n = 100
     with torch.no_grad():
         init_img = torch.zeros((1, 3, 512, 512), device=device)
         model(init_img)
-
-        for j in range(3):
-            for k in range(100):
-                t_start = time_synchronized()
-                output = model(input.to(device))
-                t_end = time_synchronized()
-                total_time += t_end - t_start
-
-            Latency_j = total_time / 100
-
-        Latency += Latency_j
-
-    Latency = Latency / 3
+        for m in range(n):
+            t_start = time.time()
+            output = model(input.to(device))
+            t_end = time.time()
+            total_time += t_end - t_start
+            
+    Latency = total_time / n
     FPS = 1 / Latency
     print('{}'.format(model_list[i]))
     print(f"Params:{params / 1e6:.1f}M")
